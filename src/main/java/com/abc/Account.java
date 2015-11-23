@@ -1,11 +1,11 @@
 package com.abc;
 
-import java.util.ArrayList;
+import java.util.Arr a yList;
 import java.util.List;
 
 public class Account {
 
-    public static final int CHECKING = 0;
+    public static final int CHECKING = 0; 
     public static final int SAVINGS = 1;
     public static final int MAXI_SAVINGS = 2;
 
