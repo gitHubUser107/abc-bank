@@ -1,11 +1,13 @@
 package com.abc;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
+	
     private List<Customer> customers;
-
+    
     public Bank() {
         customers = new ArrayList<Customer>();
     }
@@ -27,10 +29,11 @@ public class Bank {
         return number + " " + (number == 1 ? word : word + "s");
     }
 
-    public double totalInterestPaid() {
-        double total = 0;
+    public BigDecimal totalInterestPaid() {
+//      double total = 0;
+    	BigDecimal total = new BigDecimal("0");
         for(Customer c: customers)
-            total += c.totalInterestEarned();
+            total = total.add(c.totalInterestEarned());
         return total;
     }
 
