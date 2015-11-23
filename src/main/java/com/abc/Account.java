@@ -13,18 +13,18 @@ public class Account {
     private  int accountType =0;
     private BigDecimal balance = new BigDecimal("0");
     
-	private static final BigDecimal zero = new BigDecimal("0");
+    private static final BigDecimal zero = new BigDecimal("0");
     private static final BigDecimal one = new BigDecimal("1");
     private static final BigDecimal twenty = new BigDecimal("20");
     private static final BigDecimal seventy = new BigDecimal("70");
     private static final BigDecimal oneThousand = new BigDecimal("1000");
     private static final BigDecimal twoThousand = new BigDecimal("2000");
     
-	private static final BigDecimal pointOnePercentRate = new BigDecimal("0.001");
-	private static final BigDecimal pointTwoPercentRate = new BigDecimal("0.002");
-	private static final BigDecimal twoPercentRate = new BigDecimal("0.02");
-	private static final BigDecimal fivePercentRate = new BigDecimal("0.05");
-	private static final BigDecimal tenPercentRate = new BigDecimal("0.10");
+    private static final BigDecimal pointOnePercentRate = new BigDecimal("0.001");
+    private static final BigDecimal pointTwoPercentRate = new BigDecimal("0.002");
+    private static final BigDecimal twoPercentRate = new BigDecimal("0.02");
+    private static final BigDecimal fivePercentRate = new BigDecimal("0.05");
+    private static final BigDecimal tenPercentRate = new BigDecimal("0.10");
     
     public List<Transaction> transactions;
 
