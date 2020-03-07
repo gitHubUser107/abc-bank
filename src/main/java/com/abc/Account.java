@@ -28,18 +28,18 @@ public class Account {
     
     public List<Transaction> transactions;
 
-    /**
+    //why did i comment this out?
     public Account(int accountType) {
         this.accountType = accountType;
         this.transactions = new ArrayList<Transaction>();
-    }*/
+    }
     
     public Account(BigDecimal _balance) {
     	balance = balance.add(_balance);
     	this.transactions = new ArrayList<Transaction>();        
     } 
 
-    public void deposit(BigDecimal amount) {
+    public void deposit(BigDecimal amount) throws IllegalArgumentException {
         //if (amount <= 0) {
         if(amount.compareTo(zero) <= 0){	
             throw new IllegalArgumentException("amount must be greater than zero");
@@ -49,7 +49,7 @@ public class Account {
         }
     }
 
-    public void withdraw(BigDecimal amount) {
+    public void withdraw(BigDecimal amount) throws IllegalArgumentException {
     //if (amount <= 0) {
     	if(amount.compareTo(zero) <= 0){
     		throw new IllegalArgumentException("amount must be greater than zero");
@@ -85,7 +85,7 @@ public class Account {
            			return twenty.add(((amount.subtract(oneThousand)).multiply(fivePercentRate)));
 //              return 70 + (amount-2000) * 0.1;
            		return seventy.add(((amount.subtract(twoThousand)).multiply(tenPercentRate))); 
-            default:
+            default: // CHECKINGS
 //              return amount * 0.001;
             	return amount.multiply(pointOnePercentRate);
         }
@@ -102,9 +102,11 @@ public class Account {
         	amount = amount.add(t.amount);
         return amount;
     }
+    
     public BigDecimal getBalance() {
 		return balance;
 	}
+    
     public void setBalance(BigDecimal _amount) {
 		balance = _amount;
 	}    

@@ -8,11 +8,15 @@ import javax.naming.InsufficientResourcesException;
 
 import static java.lang.Math.abs;
 
+
+/**This should just be a customer model.  Why so many business logic here??*/
 public class Customer {
+	
 	private static final BigDecimal zero = new BigDecimal("0");
     
 	private String name;
-    private List<Account> accounts;
+    
+	private List<Account> accounts;
 
 
     public Customer(String name) {
@@ -54,7 +58,7 @@ public class Customer {
      * @return
      */
     public String getStatement() {
-    	String statement =  "Statement for " + name + "\n";
+    	String statement =  "Statement for " + getName() + "\n";
 //      BigDecimal total = new BigDecimal("0");
         BigDecimal _balance = new BigDecimal("0");
        

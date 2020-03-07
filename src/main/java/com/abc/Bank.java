@@ -41,7 +41,7 @@ public class Bank {
         try {
             customers = null;
             return customers.get(0).getName();
-        } catch (Exception e){
+        } catch (IndexOutOfBoundsException  e){
             e.printStackTrace();
             return "Error";
         }
